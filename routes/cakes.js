@@ -5,5 +5,6 @@ const isLoggedIn = require('../config/auth')
 
 router.get('/', cakesCtrl.index);
 router.get('/new', cakesCtrl.new);
+router.post('/', cakesCtrl.create);
 
 module.exports = router;
