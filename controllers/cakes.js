@@ -3,7 +3,9 @@ const CakeModel = require('../models/cake')
 module.exports = {
     new: newCake,
     index,
-    create
+    create,
+    show
+    
 }
 
 function newCake(req, res){
@@ -16,8 +18,11 @@ function index(req, res) {
 
 
     CakeModel.find({})
-    .then(function(allcakes){
-
+    .then(function(cakeOrders){
+       
+       console.log(cakeOrders, '<--cake orders')
+       
+        res.render('cakes/index',{cakes: cakeOrders})
     }).catch(function(err){
         console.log(err);
         res.send(err)
@@ -47,6 +52,22 @@ function index(req, res) {
         })
 
    }
+
+
+ function show(req, res) {
+    console.log(req.user, '<-- this is req.user')
+
+    CakeModel.findById(req.params.id)
+       .then(function(cakes) {
+        console.log(cakes)
+        res.render('cakes/show', {
+            cake: cakes
+        })
+       }).catch((err) =>{
+        console.log(err);
+        res.render(err)
+       })
+ }
 
 
 

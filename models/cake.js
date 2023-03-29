@@ -19,4 +19,12 @@ const cakeSchema = new mongoose.Schema({
 
 })
 
+// const commentsSchema = new mongoose.Schema(
+//     {
+//      content: String,
+//      userId: {type:}   
+
+//     }
+// )
+
 module.exports = mongoose.model('Cake', cakeSchema)

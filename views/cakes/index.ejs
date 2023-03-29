@@ -1,14 +1,28 @@
 <%- include('../partials/header') %>
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>cakes</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+
     <h1>A Cake for every Occasion</h1>
-    <a href="/cakes/new">Orders</a>
     <a href="/cakes/new">Place Order</a>
-  </body>
-</html>
+    <% if (user) {%>
+    <table id="list">
+      <thead>
+        <tr>
+          <th>Flavor</th>
+          <th>Occasion</th>
+          <th>Style</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% cakes.forEach(function(m) { %>
+          <tr>
+            <td><%= m.flavor %></td>
+            <td><%= m.occasion %></td>
+            <td><%= m.style%></td>
+            <td><a href="/cakes/<%= m._id %>">DETAILS</a></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+      <% } %>
+       
+      
 <%- include('../partials/footer') %>
