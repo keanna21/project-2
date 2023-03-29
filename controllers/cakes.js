@@ -4,7 +4,8 @@ module.exports = {
     new: newCake,
     index,
     create,
-    show
+    show,
+    delete: deleteOrder
     
 }
 
@@ -69,6 +70,31 @@ function index(req, res) {
        })
  }
 
+ 
+   async function deleteOrder(req, res) {
+        try{
+            await CakeModel.findByIdAndDelete(req.params.id)
+            res.redirect('/cakes')
+
+        }catch(err){
+            console.log(err, 'this is the delete error')
+        }
+    // CakeModel.findOne({
+        //     'cakes._id': req.params.id,
+        //     'cakes.userId': req.user._id,
+        // }).then(function(cakeOrders) {
+        //     if(!cakeOrders) return res.redirect('/cakes');
+
+        //     cakeOrders.cakes.remove(req.params.id);
+
+        //     cakeOrders.save().then(function(){
+        //         res.redirect(`/cakes${cakeOrders._id}`);
+        //     })
+        // }).catch(err => {
+        //     res.send(err)
+        // })
+    }
+ 
 
 
    
