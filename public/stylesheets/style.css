@@ -1,3 +1,7 @@
+body {
+  background-color: floralwhite;
+}
+
 .brand-logo {
   margin-left: 15px;
 }
@@ -28,4 +32,29 @@
 
 .login img {
   height: 30px;
+}
+
+.header {
+  text-align: right;
+  font-family: serif;
+  font-style: oblique;
+  font-weight: 600;
+  
+  
+
+}
+
+.slogan {
+  font-family: snell roundhand, cursive;
+  font-weight: 900;
+  text-align: center;
+  color: blueviolet;
+}
+
+.order {
+  color: blueviolet;
+}
+
+.container {
+  background: ;
 }

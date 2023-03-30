@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('../partials/header') %>
 <body>
     <h1>cakes</h1>
     <section id="show-page">
@@ -21,7 +14,25 @@
         <div>
           <%= cake.style %>
         </div>
+        <div>comments:</div>
+        <% cake.comments.forEach((comment)=> { %>
+            <div><%=comment.content  %></div>
+            <% }) %>
+        <form id="new-form" action="/cakes/<%= cake._id%>/edit?_method=PUT" method="POST">
+            <label>Flavor</label>
+            <input type="text" name="flavor" value="<%= cake.flavor %>">
+            <label>Occasion</label>
+            <input type="text" name="occasion" value="<%= cake.occasion %>">
+            <label>Style</label>
+            <input type="text" name="style" value="<%= cake.style %>">
+            <input type="submit" value="Edit Order">
+          </form>
+          <br>
+          <form id="new-form" action="/cakes/<%= cake._id%>" method="POST">
+        <input name="content" type="text">
+        <button type="submit">ADD COMMENT</button>
+      </form>
         
-    
+        
 </body>
 </html>
