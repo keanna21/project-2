@@ -7,7 +7,7 @@ This cake app is used to place an order for a cake to celebrate any special occa
 ## planning
 
 <img src="./public/images/trello.png" alt="trello" title='Trello'>
-This is your passport boilerplate.
+
 
 
 #### Technologies Used
