@@ -2,7 +2,7 @@
 
 <img src="./public/images/cake.png" alt="trello" title='cake'>
 
-https://github.com/keanna21/project-2
+https://witty-fly-bonnet.cyclic.app
 
 This cake app is used to place an order for a cake to celebrate any special occasion that life has to offer! You can choose from a varity of options and make any special request on any cake order.
 
