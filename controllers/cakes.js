@@ -40,17 +40,7 @@ async function create(req, res) {
     console.log(err, "create err");
   }
 
-  //   CakeModel.create(req.body)
-  //     .then(function(cake){
-
-  //         console.log(cake)
-  //         res.redirect('/cakes');
-
-  //     }).catch((err) => {
-  //         console.log(err);
-  //         res.send()
-
-  //     })
+  
 }
 
 function show(req, res) {
@@ -76,20 +66,6 @@ async function deleteOrder(req, res) {
   } catch (err) {
     console.log(err, "this is the delete error");
   }
-  // CakeModel.findOne({
-  //     'cakes._id': req.params.id,
-  //     'cakes.userId': req.user._id,
-  // }).then(function(cakeOrders) {
-  //     if(!cakeOrders) return res.redirect('/cakes');
-
-  //     cakeOrders.cakes.remove(req.params.id);
-
-  //     cakeOrders.save().then(function(){
-  //         res.redirect(`/cakes${cakeOrders._id}`);
-  //     })
-  // }).catch(err => {
-  //     res.send(err)
-  // })
 }
 
 async function updateOrder(req, res) {

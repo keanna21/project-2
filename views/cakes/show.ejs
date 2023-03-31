@@ -1,23 +1,18 @@
 <%- include('../partials/header') %>
 <body>
-    <h1>cakes</h1>
+    <h1>Order Details:</h1>
     <section id="show-page">
-        <div>Flavor: </div>
-        <div>
-          <%= cake.flavor %>
-        </div>
-        <div>Occasion: </div>
-        <div>
-          <%= cake.occasion %>
-        </div>
-        <div>Style: </div>
-        <div>
-          <%= cake.style %>
-        </div>
+        <div>Flavor:  <%= cake.flavor %> </div>
+       <br>
+        <div>Occasion:   <%= cake.occasion %></div>
+        <br>
+        <div>Style:  <%= cake.style %></div>
+        <br>
         <div>comments:</div>
         <% cake.comments.forEach((comment)=> { %>
             <div><%=comment.content  %></div>
             <% }) %>
+            <br>
         <form id="new-form" action="/cakes/<%= cake._id%>/edit?_method=PUT" method="POST">
             <label>Flavor</label>
             <input type="text" name="flavor" value="<%= cake.flavor %>">
@@ -27,6 +22,8 @@
             <input type="text" name="style" value="<%= cake.style %>">
             <input type="submit" value="Edit Order">
           </form>
+          <br>
+          <br>
           <br>
           <form id="new-form" action="/cakes/<%= cake._id%>/comments" method="POST">
         <input name="content" type="text">

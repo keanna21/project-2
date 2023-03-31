@@ -4,16 +4,7 @@ module.exports = {
   create,
 };
 
-// async function create(req, res) {
-//     try{
 
-//         await CakeModel.findByIdAndUpdate({_id: req.params.id}, req.body, {new: true})
-//         res.redirect(`/cakes/${req.params.id}`)
-
-//     }catch(err){
-//         console.log(err, 'this is the comments error')
-//     }
-//   }
 
 async function create(req, res) {
   try {
