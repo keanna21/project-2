@@ -4,7 +4,7 @@ const commentsCtrl = require("../controllers/comments");
 
 const isLoggedIn = require("../config/auth");
 
-router.get("/:id", commentssCtrl.show);
+// router.get("/:id", commentssCtrl.show);
 router.post("/cakes/:id/comments", commentsCtrl.create);
 
 module.exports = router;

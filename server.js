@@ -13,6 +13,7 @@ const MongoStore = require('connect-mongo');
 
 const indexRoutes = require('./routes/index');
 const cakesRoutes = require('./routes/cakes');
+const commentsRoutes = require('./routes/comments')
 
 
 
@@ -64,6 +65,7 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', indexRoutes);
 app.use('/cakes', cakesRoutes)
+app.use('/', commentsRoutes)
 
 
 

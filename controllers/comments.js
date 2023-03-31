@@ -23,8 +23,9 @@ async function create(req, res) {
     req.body.userId = req.user._id;
     cake.comments.push(req.body);
     await cake.save();
+    res.redirect(`/cakes/${req.params.id}`);
   } catch (err) {
     console.log("this is comments err");
   }
-  res.redirect(`/cakes/${req.params.id}`);
+  
 }

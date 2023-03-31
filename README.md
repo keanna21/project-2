@@ -1,6 +1,6 @@
 # passport-boilerplate
 
-
+<img src="./public/images/trello.png" alt="trello" title='Trello'>
 This is your passport boilerplate.
 
 ## Setup 
